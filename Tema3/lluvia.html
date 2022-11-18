@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lluvia</title>
+</head>
+<body>
+    <svg viewbox="0 0 200 200">
+        <path class="gota" id="uno" d="M 10 20 C 5 30, 25 30, 20 20 L15,10 Z"  fill="blue" stroke="blue"></path>
+        <path class="gota" id="dos" d="M 30 20 C 25 30, 45 30, 40 20 L35,10 Z"  fill="blue" stroke="blue"></path>
+        <path class="gota" id="tres" d="M 20 20 C 15 30, 35 30, 30 20 L25,10 Z"  fill="blue" stroke="blue"></path>
+        <path class="gota" id="cuatro" d="M 40 20 C 35 30, 55 30, 50 20 L45,10 Z"  fill="blue" stroke="blue"></path>
+        <path class="gota" id="cinco" d="M 50 20 C 45 30, 65 30, 60 20 L55,10 Z"  fill="blue" stroke="blue"></path>
+    </svg>
+</body>
+<style>
+    .gota{
+        animation: llueve 1.5s linear infinite;
+    }
+    #uno{
+        animation-duration: 0.8s;
+    }
+    #dos{
+        animation-duration: 2s;
+    }
+    #tres{
+        animation-duration: 1s;
+    }
+    #cuatro{
+        animation-duration: 1.6s;
+    }
+    #cinco{
+        animation-duration: 3s;
+    }
+
+    @keyframes llueve {
+        0%{
+            transform: translateY(0);
+        }
+        100%{
+            transform: translateY(90px);
+        }
+    }
+</style>
+</html>

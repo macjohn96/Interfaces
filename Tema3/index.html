@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svgs</title>
+</head>
+<body>
+    <svg>
+        <rect x="100" y="50" width="80" height="40" fill="aliceblue" stroke="black" rx="10" class="router"></rect>
+        <rect x="115" y="65" width="10" height="10" fill="aliceblue" stroke="black" rx="2" class="luz primera"></rect>
+        <rect x="135" y="65" width="10" height="10" fill="aliceblue" stroke="black" rx="2" class="luz segundo"></rect>
+        <rect x="155" y="65" width="10" height="10" fill="aliceblue" stroke="black" rx="2" class="luz"></rect>
+        <circle cx="200" cy="70" r="10" class="circleSend">
+        </circle>
+        <circle cx="280" cy="70" r="10" class="circleRecieve">
+        </circle>
+        <rect x="300" y="50" width="80" height="40" fill="aliceblue" stroke="black" rx="10" class="router"></rect>
+        <rect x="315" y="65" width="10" height="10" fill="aliceblue" stroke="black" rx="2" class="luz primera"></rect>
+        <rect x="335" y="65" width="10" height="10" fill="aliceblue" stroke="black" rx="2" class="luz segundo"></rect>
+        <rect x="355" y="65" width="10" height="10" fill="aliceblue" stroke="black" rx="2" class="luz"></rect>
+
+        <path d="M 500 10 C 520 30, 540 30, 560 10" stroke="black" fill="transparent"/>
+        <path d="M 500 100 Q 530 130 560 100" stroke="black" fill="transparent"/>
+    </svg>
+    <div class="containerFlecha"><svg>
+        <path d="M 10 100 l50,50 l50,-50 m-50,50 v-150" stroke-width="10" stroke="#aac" fill="none" id="flecha"></path>
+    </svg></div>
+    <svg class="corazon" viewbox="0 0 400 250">
+        <path d="M 150 110 Q 160 50 200 100 Q 240 50 250 110 l-50 70" stroke-width="10" fill="red"></path>
+    </svg>
+</body>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        width: 100%;
+    }
+    svg{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 400px;
+        background-color: aliceblue;
+    }
+    #flecha{
+        margin: 50px;
+
+    }
+    .containerFlecha{
+        margin: 50px;
+        width: 150px;
+        height: 170px;
+    }
+    .containerFlecha svg{
+        width: 150px;
+        height: 170px;
+    }
+    .containerFlecha:hover{
+        transition: all 1s;
+        transform: rotate(-90deg);
+    }
+    .router{
+        stroke-width: 3px;
+    }
+    .luz{
+        stroke-width: 2px;
+    }
+    .circleSend{
+        animation: sendingCircle 7s ease infinite;
+    }
+    .circleRecieve{
+        fill: none;
+        animation: recieveCircle 7s 3.5s ease infinite;
+    }
+    .primera{
+        animation: sendingRect 7s ease infinite;
+    }
+    .segundo{
+        fill: none;
+        animation: recieveRect 7s ease infinite;
+    }
+    .corazon{
+        margin: 0;
+        padding: 0;
+        width: 500px;
+        height: 200px;
+        background-color: unset;
+        animation: latir 2s ease infinite;
+    }
+    
+    @keyframes latir {
+        0%{
+            transform: scale(1);
+        }
+        20%{
+            transform: scale(2);
+        }
+        40%{
+            transform: scale(1);
+        }
+        60%{
+            transform: scale(2);
+        }
+        80%{
+            transform: scale(1);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+
+    @keyframes moveArrow {
+        0%{
+            transform: rotateX(0);
+        }
+        100%{
+            transform: rotateX(90deg);
+        }
+    }
+
+    @keyframes sendingRect {
+        0% {
+            fill: green;
+        }
+        5%{
+            fill: none;
+        }
+        10%{
+            fill: green;
+        }
+        15%{
+            fill: none;
+        }
+        20%{
+            fill: green;
+        }
+        25%{
+            fill: none;
+        }
+        30%{
+            fill: green;
+        }
+        35%{
+            fill: none;
+        }
+        40%{
+            fill: green;
+        }
+        45%{
+            fill: none;
+        }
+        49%{
+            fill: green;
+        }
+        50%{
+            fill: none;
+        }
+        100% {
+            fill: none;
+        }
+    }
+    @keyframes recieveRect {
+        100% {
+            fill: red;
+        }
+        95%{
+            fill: none;
+        }
+        90%{
+            fill: red;
+        }
+        85%{
+            fill: none;
+        }
+        80%{
+            fill: red;
+        }
+        75%{
+            fill: none;
+        }
+        70%{
+            fill: red;
+        }
+        65%{
+            fill: none;
+        }
+        60%{
+            fill: red;
+        }
+        55%{
+            fill: none;
+        }
+        51%{
+            fill: red;
+        }
+        50%{
+            fill: none;
+        }
+        0% {
+            fill: none;
+        }
+    }
+    @keyframes sendingCircle {
+        0% {
+            fill: green;
+            r: 10;
+            transform: translate(0, 0);
+        }
+        49%{
+            fill: green;
+            r: 7;
+            transform: translate(80px, 0);
+        }
+        50%{
+            fill: none;
+            r: 7;
+            transform: translate(80px, 0);
+        }
+        100% {
+            r: 7;
+            fill: none;
+            transform: translate(80px, 0);
+        }
+    }
+    @keyframes recieveCircle {
+        100% {
+            fill: none;
+            r: 7;
+            transform: translate(-80px, 0);
+        }
+        51%{
+            fill: none;
+            r: 7;
+            transform: translate(-80px, 0);
+            
+        }
+        50%{
+            fill: red;
+            r: 7;
+            transform: translate(-80px, 0);
+        }
+        0% {
+            fill: red;
+            r: 10;
+            transform: translate(0, 0);
+        }
+    }
+</style>
+</html>
