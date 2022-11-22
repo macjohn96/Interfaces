@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+header{
+    display: flex;
+    column-gap: 10px;
+}
+.blue{
+    background-color: rgb(56,200,253);
+    height: calc(15vh - 20px);
+    width: calc(25%);
+}
+.orange{
+    background-color: rgb(254,175,72);
+    height: calc(15vh - 20px);
+    width: calc(75%);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.red{
+    background-color: rgb(255,119,71);
+    height: calc(45vh - 10px);
+    width: 100%;
+}
+.yellowContainer{
+    display: flex;
+    column-gap: 10px;
+}
+.yellow{
+    background-color: rgb(255,214,72);
+    height: calc(40vh - 10px);
+}
+#uno, #dos, #tres{
+    width: calc(100%/3);
+}
+.purple{
+    width: 100%;
+    height: calc(15vh - 10px);
+    background-color: rgb(253,193,255);
+}
+
+/*Tablet*/
+@media only screen and (max-width: 768px) {
+    .red{
+        height: calc(40vh - 10px);
+    }
+    .yellow{
+        height: calc(35vh - 10px);
+    }
+    .purple{
+        height: calc(10vh - 10px);
+    }
+}
+
+/*Mobile*/
+@media only screen and (max-width: 425px) {
+    .yellowContainer{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    #uno, #dos, #tres{
+        width: 100%;
+        height: calc(20vh - 10px);
+    }
+}

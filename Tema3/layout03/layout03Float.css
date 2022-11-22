@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+}
+span{
+    display: block;
+    width: 100%;
+}
+ul {
+    list-style: none;
+}
+
+body{
+    padding: 5px;
+}
+
+header{
+    width: 100%;
+    background-color: rgb(255,255,0);
+    border-radius: 10px;
+}
+header span{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+header span:first-child{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+main{
+    padding: 5px 0;
+}
+.containerLeft{
+    border-radius: 10px;
+    background-color: rgb(254,165,0);
+    width: 22%;
+    padding: 5px;
+    margin: 5px;
+    float: left;
+}
+.containerMid{
+    color: white;
+    background-color: rgb(0,0,254);
+    border-radius: 10px;
+    width: 36%;
+    padding: 5px;
+    margin: 5px;
+    float: left;
+}
+.containerMid h2{
+    font-size: 18px;
+    margin: 20px 0;
+}
+.containerMid span{
+    margin: 10px 0;
+}
+.containerRight{
+    width: 39%;
+    padding: 5px 0;
+    float: left;
+}
+
+.containerRight #top, .containerRight #bottom{
+    background-color: rgb(0,0,254);
+    border-radius: 10px;
+    margin: 0 5px 20px 5px;
+    padding: 5px;
+    color: white;
+}
+
+.containerRight #top h2, .containerRight #bottom h2{
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.containerRight #top span, .containerRight #bottom span{
+    margin: 10px 0;
+}
+footer{
+    width: 100%;
+    background-color: rgb(255,192,203);
+    border-radius: 10px;   
+    clear: both;
+}
